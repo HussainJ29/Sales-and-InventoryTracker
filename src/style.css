@@ -1,0 +1,162 @@
+/* General Utility Classes */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Flexbox Utility Classes */
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Spacing Utility Classes */
+.p-4 {
+  padding: 1rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.space-x-4 > * + * {
+  margin-left: 1rem;
+}
+
+/* Typography Utility Classes */
+.text-white {
+  color: #ffffff;
+}
+
+.text-2xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-lg {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.hover\:text-gray-200:hover {
+  color: #e5e7eb;
+}
+
+/* Background Colors */
+.bg-blue-600 {
+  background-color: #2563eb;
+}
+
+.bg-gray-100 {
+  background-color: #f4f7fa;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #2563eb;
+  height: 5rem; /* Set the height of the navbar */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  color: #ffffff;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.navbar a:hover {
+  color: #e5e7eb;
+}
+
+/* Orders Page Container */
+.orders-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: calc(100vh - 5rem); /* Adjust height to account for navbar */
+  padding-top: 2rem; /* Add padding to prevent overlap with the navbar */
+  background-color: #f4f7fa;
+}
+
+/* Table Container Styling */
+.table-container {
+  width: 100%;
+  max-width: 960px;
+  margin-top: 20px;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 24px;
+  margin: 0 auto; /* Center the table horizontally */
+}
+
+/* Table Styling */
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+.orders-table thead {
+  background-color: #007BFF;
+  color: white;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.orders-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.orders-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Orders Heading */
+.orders-heading {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-bottom: 24px;
+}
