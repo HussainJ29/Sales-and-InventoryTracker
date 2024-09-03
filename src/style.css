@@ -5,6 +5,7 @@
   margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
+  max-width: 1200px; /* Constrain the container width */
 }
 
 /* Flexbox Utility Classes */
@@ -52,8 +53,8 @@
 }
 
 .text-2xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+  font-size: 2rem; /* Slightly larger for a more modern feel */
+  line-height: 2.5rem;
 }
 
 .text-lg {
@@ -85,22 +86,25 @@
 /* Navbar Styling */
 .navbar {
   background-color: #2563eb;
-  height: 5rem; /* Set the height of the navbar */
+  height: 4rem; /* Set the height of the navbar */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
   color: #ffffff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
 }
 
 .navbar a {
   color: #ffffff;
   text-decoration: none;
   margin-left: 1rem;
+  font-weight: 500;
 }
 
 .navbar a:hover {
-  color: #e5e7eb;
+  color: #dbeafe;
 }
 
 /* Orders Page Container */
@@ -108,9 +112,9 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  min-height: calc(100vh - 5rem); /* Adjust height to account for navbar */
+  min-height: calc(100vh - 4rem); /* Adjust height to account for navbar */
   padding-top: 2rem; /* Add padding to prevent overlap with the navbar */
-  background-color: #f4f7fa;
+  background-color: #f9fafb;
 }
 
 /* Table Container Styling */
@@ -119,28 +123,36 @@
   max-width: 960px;
   margin-top: 20px;
   background-color: white;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
   padding: 24px;
   margin: 0 auto; /* Center the table horizontally */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.table-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.1);
 }
 
 /* Table Styling */
 .orders-table {
   width: 100%;
   border-collapse: collapse;
-  border: 1px solid #ddd;
+  border: 1px solid #e5e7eb;
+  font-size: 0.95rem;
+  color: #374151;
 }
 
 .orders-table thead {
-  background-color: #007BFF;
+  background-color: #2563eb;
   color: white;
 }
 
 .orders-table th,
 .orders-table td {
   padding: 12px 15px;
-  border: 1px solid #ddd;
+  border: 1px solid #e5e7eb;
   text-align: center;
 }
 
@@ -149,14 +161,165 @@
 }
 
 .orders-table tbody tr:hover {
-  background-color: #f1f1f1;
+  background-color: #f3f4f6;
 }
 
 /* Orders Heading */
 .orders-heading {
-  font-size: 36px;
+  font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
-  color: #333;
+  color: #1f2937;
   margin-bottom: 24px;
+}
+
+/* Signup Form Container */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh; /* Adjust this value as needed */
+  max-width: 750px;
+  background-color: #f3f4f6;
+  margin: auto; /* Center container horizontally */
+}
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh; /* Adjust this value as needed */
+  max-width: 500px;
+  background-color: #f3f4f6;
+  margin: auto; /* Center container horizontally */
+}
+.login-form {
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 350px; /* Reduced the max-width for a smaller box */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.signup-form:hover,
+.login-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.signup-heading,
+.login-heading {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  color: #1f2937;
+  font-weight: bold;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus {
+  border-color: #2563eb;
+  box-shadow: 0px 0px 0px 3px rgba(37, 99, 235, 0.2);
+  outline: none;
+}
+
+/* Styling for the password container */
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-container input {
+  flex: 1;
+}
+
+.show-password-label {
+  position: absolute;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem; /* Slightly smaller text for the label */
+  color: #374151; /* Neutral color */
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.show-password-label:hover {
+  color: #2563eb;
+}
+
+/* Link to Signup */
+.redirect-signup {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.redirect-signup a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.redirect-signup a:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+/* Button Styling */
+.signup-button,
+.login-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.signup-button:hover,
+.login-button:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-3px);
+}
+
+.signup-button:active,
+.login-button:active {
+  background-color: #1e40af;
+  transform: translateY(0);
+}
+
+/* Style for the password requirements text */
+.password-requirements {
+  display: block;
+  font-size: 0.875rem; /* Slightly smaller text */
+  color: #6b7280; /* Gray color */
+  margin-top: 0.5rem; /* Small space below the password input */
 }
