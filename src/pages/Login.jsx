@@ -26,8 +26,8 @@ const Login = () => {
         alert('Login successful!');
         // Optionally store the token in local storage
         localStorage.setItem('token', data.token);
-        // Navigate to a different page after successful login
-        navigate('/orders');
+        // Navigate to the dashboard after successful login
+        navigate('/');  // Redirecting to the dashboard
       } else {
         // Handle errors (like invalid credentials)
         alert(data.message || 'Login failed. Please check your credentials.');

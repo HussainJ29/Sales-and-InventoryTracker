@@ -1,11 +1,16 @@
 /* General Utility Classes */
+.mainContainer{
+  height: 100%;
+  width: 100%;
+}
 .container {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+/* 
   padding-left: 1rem;
   padding-right: 1rem;
-  max-width: 1200px; /* Constrain the container width */
+  max-width: 1200px; Constrain the container width */
 }
 
 /* Flexbox Utility Classes */
@@ -323,3 +328,147 @@
   color: #6b7280; /* Gray color */
   margin-top: 0.5rem; /* Small space below the password input */
 }
+/* Dashboard Main Container */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full height of the viewport */
+  width: 100%;
+  margin: 0;
+}
+
+/* Hero Section: Split into two columns */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -25px;
+  width: 100%;
+  padding: 2rem;
+  background-color: #b1d6fa;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  height: 65vh; /* Adjusted height for visual balance */
+}
+
+/* Left Side: Hero Image Container */
+.hero-image-container {
+  flex: 1; /* Takes up 1/2 of the width */
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+}
+
+.hero-image {
+  width: 70%; /* Adjust size of the image */
+  height: auto;
+  object-fit: contain;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); /* Submerged effect with stronger shadow */
+}
+
+/* Right Side: Buttons */
+.hero-content {
+  flex: 1; /* Takes up 1/2 of the width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2rem; /* Add space between image and buttons */
+}
+
+.dashboard-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 1rem 6.5rem; /* Adjusted padding for bigger buttons */
+  margin: 1rem 0;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dashboard-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px); /* Slight elevation effect on hover */
+}
+
+/* Cards Section */
+.cards-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  flex-grow: 1; /* Ensure this section grows and takes available space */
+}
+
+.card {
+  background-color: white;
+  border-radius: 20px; /* Keep the smooth corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 1rem; /* Reduced padding */
+  flex: 0 1 25%; /* Reduced the flex size to make cards smaller */
+  margin: 0 0.5rem; /* Reduced margin between the cards */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space between image and text */
+  align-items: center; /* Centering the content */
+  height: 100%; /* Ensure equal height for cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+  max-width: 80%; /* Make the image smaller */
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+  margin-bottom: auto; /* Push the image up */
+}
+
+.card h3 {
+  font-size: 1.2rem; /* Reduced font size */
+  margin: 1rem 0 0; /* Add margin to keep distance from the image */
+}
+
+.card p {
+  color: #6c757d;
+  font-size: 0.9rem; /* Slightly smaller text */
+  margin-bottom: 1rem; /* Add space below the paragraph */
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Footer Section */
+.dashboard-footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  width: 100%;
+  height: 150px;
+  position: relative; /* Ensure footer stays relative within the page structure */
+  bottom: 0;
+  left: 0;
+  margin-top: 50px; /* Push the footer to the bottom of the page */
+}
+
+.dashboard-footer a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+.dashboard-footer a:hover {
+  color: #007bff;
+}
+
